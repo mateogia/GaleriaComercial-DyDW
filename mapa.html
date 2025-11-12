@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Locales - Galería El Ecléctico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Galería El Ecléctico">
+                </a>
+                
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">INICIO</a>
+                    <a href="servicio.html" class="nav-link">SERVICIO</a>
+                    <a href="entretenimiento.html" class="nav-link">ENTRETENIMIENTO</a>
+                    <a href="locales.html" class="nav-link">LOCALES</a>
+                    <a href="ofertas.html" class="nav-link">OFERTAS</a>
+                    <a href="gastronomia.html" class="nav-link">GASTRONOMÍA</a>
+                    <a href="contacto.html" class="nav-link">CONTACTO</a>
+                    <a href="mapa.html" class="nav-link active">MAPA</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero-simple">
+            <div class="container">
+                <h1>Mapa de Locales</h1>
+                <p>Encuentra tu local favorito en la galería</p>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="section">
+            <div class="container">
+                <div class="search-section">
+                    <h2 class="section-title">Buscador de Locales</h2>
+                    
+                    <!-- Search Box -->
+                    <div class="search-box">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="🔍 Buscar por nombre del local..."
+                            class="search-input"
+                        >
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="filter-section">
+                        <p class="filter-label">Filtrar por categoría:</p>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-category="todos">Todos</button>
+                            <button class="filter-btn" data-category="moda">👔 Moda</button>
+                            <button class="filter-btn" data-category="gastronomia">🍽️ Gastronomía</button>
+                            <button class="filter-btn" data-category="tecnologia">📱 Tecnología</button>
+                            <button class="filter-btn" data-category="entretenimiento">🎮 Entretenimiento</button>
+                            <button class="filter-btn" data-category="servicios">🔧 Servicios</button>
+                        </div>
+                    </div>
+
+                    <!-- Results Counter -->
+                    <div class="results-info">
+                        <p id="resultsCount">Mostrando <strong>9</strong> de <strong>9</strong> locales</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Map Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">🗺️ Mapa Interactivo de la Galería</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--color-muted-foreground);">
+                    Haz clic en cualquier local para ver más información
+                </p>
+                
+                <!-- Floor Selector -->
+                <div class="floor-selector">
+                    <button class="floor-btn active" data-floor="planta-baja">
+                        <span class="floor-emoji">🏢</span>
+                        Planta Baja
+                    </button>
+                    <button class="floor-btn" data-floor="primer-piso">
+                        <span class="floor-emoji">🏢</span>
+                        Primer Piso
+                    </button>
+                </div>
+
+                <!-- Map Container -->
+                <div class="map-interactive-container">
+                    <!-- Planta Baja -->
+                    <div id="planta-baja" class="floor-map active">
+                        <div class="floor-header">
+                            <h3>Planta Baja - 6 Locales</h3>
+                            <p class="floor-subtitle">Vista desde arriba del nivel principal</p>
+                        </div>
+                        <div class="floor-plan">
+                            <!-- Entrada principal -->
+                            <div class="entrance">
+                                <span>🚪 ENTRADA PRINCIPAL</span>
+                            </div>
+                            <!-- Label del pasillo -->
+                            <div class="hallway-label">🚶 PASILLO CENTRAL 🚶</div>
+                            <!-- Los locales se generan dinámicamente con JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Primer Piso -->
+                    <div id="primer-piso" class="floor-map">
+                        <div class="floor-header">
+                            <h3>Primer Piso - 3 Locales</h3>
+                            <p class="floor-subtitle">Zona de entretenimiento y gastronomía</p>
+                        </div>
+                        <div class="floor-plan">
+                            <!-- Escaleras -->
+                            <div class="stairs">
+                                <span>🪜 ESCALERAS / ASCENSOR</span>
+                            </div>
+                            <!-- Label del pasillo -->
+                            <div class="hallway-label">🚶 PASILLO CENTRAL 🚶</div>
+                            <!-- Los locales se generan dinámicamente con JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store List Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Lista de Locales</h2>
+                <div id="storeList" class="store-list-grid">
+                    <!-- Store cards will be generated by JavaScript -->
+                </div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>No se encontraron resultados</h3>
+                    <p>Intenta con otro término de búsqueda o categoría</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legend -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="map-legend">
+                    <h3>Leyenda</h3>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #C9A959;"></span>
+                            <span>Local resaltado (resultado de búsqueda)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #4ade80;"></span>
+                            <span>Local disponible</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">📍</span>
+                            <span>Haz clic en un local para ver más información</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Horarios</h3>
+                    <p>Lunes a Domingo</p>
+                    <p>10:00 - 22:00</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p>galeriaeclettico@gmail.com</p>
+                    <p>Tel: +54 9 11 4073-7188</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Ubicación</h3>
+                    <p>Av. Principal 1234</p>
+                    <p>Buenos Aires, Argentina</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Galería El Ecléctico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="mapa.js"></script>
+</body>
+</html>

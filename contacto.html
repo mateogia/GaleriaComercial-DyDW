@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Galería El Ecléctico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Galería El Ecléctico">
+                </a>
+                
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">INICIO</a>
+                    <a href="servicio.html" class="nav-link">SERVICIO</a>
+                    <a href="entretenimiento.html" class="nav-link">ENTRETENIMIENTO</a>
+                    <a href="locales.html" class="nav-link">LOCALES</a>
+                    <a href="ofertas.html" class="nav-link">OFERTAS</a>
+                    <a href="gastronomia.html" class="nav-link">GASTRONOMÍA</a>
+                    <a href="contacto.html" class="nav-link active">CONTACTO</a>
+                    <a href="mapa.html" class="nav-link">MAPA</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero-simple">
+            <div class="container">
+                <h1>Contacto</h1>
+                <p>Estamos aquí para ayudarte. Contáctanos por el medio que prefieras</p>
+            </div>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Medios de Contacto</h2>
+                <div class="contact-methods-grid">
+                    <div class="contact-method-card">
+                        <div class="contact-method-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>galeriaeclettico@gmail.com</p>
+                        <span class="contact-method-time">Respuesta en 24-48 horas</span>
+                    </div>
+
+                    <div class="contact-method-card">
+                        <div class="contact-method-icon">📞</div>
+                        <h3>Teléfono</h3>
+                        <p>+54 9 11 4073-7188</p>
+                        <span class="contact-method-time">Lun-Dom 10:00 - 22:00</span>
+                    </div>
+
+                    <div class="contact-method-card">
+                        <div class="contact-method-icon">📍</div>
+                        <h3>Visítanos</h3>
+                        <p>Av. Principal 1234</p>
+                        <span class="contact-method-time">Buenos Aires, Argentina</span>
+                    </div>
+
+                    <div class="contact-method-card">
+                        <div class="contact-method-icon">💬</div>
+                        <h3>Chat Virtual</h3>
+                        <p>Asistente disponible</p>
+                        <span class="contact-method-time">Ver abajo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Formulario de Contacto</h2>
+                <div class="contact-form-container">
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234-5678">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="asunto">Asunto *</label>
+                                <select id="asunto" name="asunto" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="consulta">Consulta general</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="reclamo">Reclamo</option>
+                                    <option value="local">Información sobre locales</option>
+                                    <option value="eventos">Eventos y promociones</option>
+                                    <option value="estacionamiento">Estacionamiento</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Deseo recibir ofertas y novedades por email</label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                            <button type="reset" class="btn btn-secondary-outline">Limpiar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Ubicación</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-icon">📍</div>
+                        <h3>Galería El Ecléctico</h3>
+                        <p>Av. Principal 1234, Buenos Aires</p>
+                        <p class="map-info">Cerca de las principales líneas de transporte público</p>
+                        <div class="map-details">
+                            <div class="map-detail-item">
+                                <strong>🚇 Metro:</strong> Línea B - Estación Principal (2 cuadras)
+                            </div>
+                            <div class="map-detail-item">
+                                <strong>🚌 Colectivos:</strong> 10, 37, 60, 152
+                            </div>
+                            <div class="map-detail-item">
+                                <strong>🅿️ Estacionamiento:</strong> Entrada por Calle Lateral 567
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Assistant / Chatbot -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Asistente Virtual</h2>
+                <p class="chatbot-intro">Selecciona una pregunta y obtén respuesta instantánea</p>
+                
+                <div class="chatbot-container">
+                    <div class="chatbot-window">
+                        <div class="chatbot-header">
+                            <div class="chatbot-avatar">🤖</div>
+                            <div class="chatbot-info">
+                                <h3>Asistente Virtual</h3>
+                                <span class="chatbot-status">● En línea</span>
+                            </div>
+                        </div>
+
+                        <div class="chatbot-messages">
+                            <!-- Welcome Message -->
+                            <div class="chat-message bot-message">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-bubble">
+                                    <p>¡Hola! 👋 Soy el asistente virtual de Galería El Ecléctico.</p>
+                                    <p>Selecciona una pregunta abajo para obtener información instantánea.</p>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Chat Questions -->
+                            <div class="chat-interactive">
+                                <p class="chat-prompt">Selecciona tu consulta:</p>
+                                
+                                <form class="chat-options">
+                                    <!-- Question 1: Horarios -->
+                                    <input type="radio" name="chatbot" id="chat-horarios" class="chat-radio">
+                                    <label for="chat-horarios" class="chat-option-label">
+                                        <span class="chat-option-emoji">⏰</span>
+                                        <span class="chat-option-text">¿Cuáles son los horarios?</span>
+                                    </label>
+                                    <div class="chat-response">
+                                        <div class="chat-message bot-message">
+                                            <div class="message-avatar">🤖</div>
+                                            <div class="message-bubble">
+                                                <p><strong>Horarios de Galería El Ecléctico:</strong></p>
+                                                <p>📅 <strong>Lunes a Domingo:</strong> 10:00 - 22:00 hs</p>
+                                                <p>🍽️ <strong>Patio de comidas:</strong> Hasta las 23:00 hs</p>
+                                                <p>🎬 <strong>Cine:</strong> Hasta medianoche</p>
+                                                <p>🎳 <strong>Bowling:</strong> Hasta las 02:00 (Vie-Sab hasta 04:00)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 2: Estacionamiento -->
+                                    <input type="radio" name="chatbot" id="chat-parking" class="chat-radio">
+                                    <label for="chat-parking" class="chat-option-label">
+                                        <span class="chat-option-emoji">🅿️</span>
+                                        <span class="chat-option-text">¿Tienen estacionamiento?</span>
+                                    </label>
+                                    <div class="chat-response">
+                                        <div class="chat-message bot-message">
+                                            <div class="message-avatar">🤖</div>
+                                            <div class="message-bubble">
+                                                <p><strong>Información de Estacionamiento:</strong></p>
+                                                <p>✅ Más de 500 plazas disponibles</p>
+                                                <p>� Primeras 2 horas gratis con compra validada</p>
+                                                <p>💳 $500 por hora adicional</p>
+                                                <p>📍 Entrada por Calle Lateral 567</p>
+                                                <p>🔒 Vigilancia 24 horas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 3: Ubicación -->
+                                    <input type="radio" name="chatbot" id="chat-ubicacion" class="chat-radio">
+                                    <label for="chat-ubicacion" class="chat-option-label">
+                                        <span class="chat-option-emoji">📍</span>
+                                        <span class="chat-option-text">¿Cómo llego?</span>
+                                    </label>
+                                    <div class="chat-response">
+                                        <div class="chat-message bot-message">
+                                            <div class="message-avatar">🤖</div>
+                                            <div class="message-bubble">
+                                                <p><strong>Cómo llegar:</strong></p>
+                                                <p>📍 <strong>Dirección:</strong> Av. Principal 1234, Buenos Aires</p>
+                                                <p>🚇 <strong>Metro:</strong> Línea B - Estación Principal (2 cuadras)</p>
+                                                <p>🚌 <strong>Colectivos:</strong> 10, 37, 60, 152</p>
+                                                <p>🚗 <strong>En auto:</strong> Fácil acceso desde Av. General Paz</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 4: Ofertas -->
+                                    <input type="radio" name="chatbot" id="chat-ofertas" class="chat-radio">
+                                    <label for="chat-ofertas" class="chat-option-label">
+                                        <span class="chat-option-emoji">🏷️</span>
+                                        <span class="chat-option-text">¿Qué ofertas hay?</span>
+                                    </label>
+                                    <div class="chat-response">
+                                        <div class="chat-message bot-message">
+                                            <div class="message-avatar">🤖</div>
+                                            <div class="message-bubble">
+                                                <p><strong>Ofertas destacadas:</strong></p>
+                                                <p>🎯 50% OFF en segunda unidad (Moda)</p>
+                                                <p>☕ 2x1 en cafeterías (Happy Hour 14-17hs)</p>
+                                                <p>📱 30% OFF en accesorios tecnológicos</p>
+                                                <p>🎬 3x2 en entradas de cine (Lun-Jue)</p>
+                                                <p>👉 <a href="ofertas.html">Ver todas las ofertas</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 5: Eventos -->
+                                    <input type="radio" name="chatbot" id="chat-eventos" class="chat-radio">
+                                    <label for="chat-eventos" class="chat-option-label">
+                                        <span class="chat-option-emoji">🎉</span>
+                                        <span class="chat-option-text">¿Hay eventos próximos?</span>
+                                    </label>
+                                    <div class="chat-response">
+                                        <div class="chat-message bot-message">
+                                            <div class="message-avatar">🤖</div>
+                                            <div class="message-bubble">
+                                                <p><strong>Próximos eventos:</strong></p>
+                                                <p>🎵 <strong>Viernes de Música:</strong> Shows en vivo todos los viernes 20:00</p>
+                                                <p>👨‍👩‍👧‍👦 <strong>Domingos Familiares:</strong> Talleres y actividades para chicos</p>
+                                                <p>🎨 <strong>Talleres Creativos:</strong> Sábados y domingos</p>
+                                                <p>🎄 <strong>Navidad 2025:</strong> Eventos especiales todo diciembre</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 6: Restaurantes -->
+                                    <input type="radio" name="chatbot" id="chat-gastronomia" class="chat-radio">
+                                    <label for="chat-gastronomia" class="chat-option-label">
+                                        <span class="chat-option-emoji">🍽️</span>
+                                        <span class="chat-option-text">¿Qué restaurantes tienen?</span>
+                                    </label>
+                                    <div class="chat-response">
+                                        <div class="chat-message bot-message">
+                                            <div class="message-avatar">🤖</div>
+                                            <div class="message-bubble">
+                                                <p><strong>Opciones gastronómicas:</strong></p>
+                                                <p>🍔 Hamburguesas: Kentucky, Mostaza, Burger King</p>
+                                                <p>☕ Cafeterías: Starbucks, Havanna</p>
+                                                <p>🍕 Pizzerías: Pizzería Güerrín</p>
+                                                <p>🥪 Sandwiches: Subway</p>
+                                                <p>🍦 Helados: Grido</p>
+                                                <p>� <a href="gastronomia.html">Ver todos los restaurantes</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 7: WiFi -->
+                                    <input type="radio" name="chatbot" id="chat-wifi" class="chat-radio">
+                                    <label for="chat-wifi" class="chat-option-label">
+                                        <span class="chat-option-emoji">📶</span>
+                                        <span class="chat-option-text">¿Hay WiFi gratis?</span>
+                                    </label>
+                                    <div class="chat-response">
+                                        <div class="chat-message bot-message">
+                                            <div class="message-avatar">🤖</div>
+                                            <div class="message-bubble">
+                                                <p><strong>WiFi Gratuito:</strong></p>
+                                                <p>✅ Sí, contamos con WiFi gratis de alta velocidad</p>
+                                                <p>📶 <strong>Red:</strong> GaleriaElEcletico_WiFi</p>
+                                                <p>🔓 Sin contraseña - Conexión abierta</p>
+                                                <p>� Disponible en todas las áreas de la galería</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 8: Contacto -->
+                                    <input type="radio" name="chatbot" id="chat-contacto" class="chat-radio">
+                                    <label for="chat-contacto" class="chat-option-label">
+                                        <span class="chat-option-emoji">📞</span>
+                                        <span class="chat-option-text">¿Cómo contacto atención al cliente?</span>
+                                    </label>
+                                    <div class="chat-response">
+                                        <div class="chat-message bot-message">
+                                            <div class="message-avatar">🤖</div>
+                                            <div class="message-bubble">
+                                                <p><strong>Contacto - Atención al Cliente:</strong></p>
+                                                <p>📧 <strong>Email:</strong> galeriaeclettico@gmail.com</p>
+                                                <p>📞 <strong>Teléfono:</strong> +54 9 11 4073-7188</p>
+                                                <p>⏰ <strong>Horario:</strong> Lunes a Domingo 10:00 - 22:00</p>
+                                                <p>💬 O completa el formulario de contacto arriba</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="chatbot-footer">
+                            <p class="chatbot-note">💡 Selecciona las opciones de arriba para obtener respuestas instantáneas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info -->
+        <section class="section">
+            <div class="container">
+                <div class="contact-info-card">
+                    <h2>¿Prefieres hablar con una persona?</h2>
+                    <p>Nuestro equipo de atención al cliente está disponible para ayudarte</p>
+                    <div class="contact-info-details">
+                        <div class="contact-info-item">
+                            <strong>📞 Teléfono:</strong> +54 9 11 4073-7188
+                        </div>
+                        <div class="contact-info-item">
+                            <strong>📧 Email:</strong> galeriaeclettico@gmail.com
+                        </div>
+                        <div class="contact-info-item">
+                            <strong>⏰ Horario de atención:</strong> Lunes a Domingo, 10:00 - 22:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Horarios</h3>
+                    <p>Lunes a Domingo</p>
+                    <p>10:00 - 22:00</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p>galeriaeclettico@gmail.com</p>
+                    <p>Tel: +54 9 11 4073-7188</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Ubicación</h3>
+                    <p>Av. Principal 1234</p>
+                    <p>Buenos Aires, Argentina</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Galería El Ecléctico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
