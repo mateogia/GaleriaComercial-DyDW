@@ -82,10 +82,6 @@ El sitio se adapta automáticamente a diferentes dispositivos:
 - **Desktop** (>768px): Layout completo con navegación horizontal
 - **Mobile** (<768px): Diseño simplificado adaptado a pantallas pequeñas
 
-## 🔧 Configuración del Logo
-
-Coloca tu logo en `assets/logo.png` o actualiza las rutas en los archivos HTML si usas otro nombre/formato.
-
 ## 📞 Información de Contacto
 
 - **Email**: galeriaeclettico@gmail.com

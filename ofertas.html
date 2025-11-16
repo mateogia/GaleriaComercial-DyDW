@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ofertas - Galería El Ecléctico</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="menu.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -12,10 +13,22 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="Galería El Ecléctico">
+                    <img src="assets/logo-eclectico.png" alt="Galería El Ecléctico">
                 </a>
                 
-                <nav class="nav">
+                <!-- Botón hamburguesa (solo visible en móvil) -->
+                <button class="hamburger" id="hamburger" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav" id="nav">
+                    <div class="nav-header">
+                        <h2>Menú de Navegación</h2>
+                        <p class="nav-subtitle">Explora las diferentes secciones de Galería El Ecléctico</p>
+                        <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
+                    </div>
                     <a href="index.html" class="nav-link">INICIO</a>
                     <a href="servicio.html" class="nav-link">SERVICIO</a>
                     <a href="entretenimiento.html" class="nav-link">ENTRETENIMIENTO</a>
@@ -31,187 +44,177 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="page-hero-simple">
-            <div class="container">
-                <h1>Ofertas y Promociones</h1>
-                <p>Descubre las mejores ofertas y descuentos exclusivos de nuestros locales</p>
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Ofertas y Promociones</h1>
+                    <p class="hero-subtitle">Descubre las mejores ofertas y descuentos exclusivos de nuestros locales</p>
+                </div>
             </div>
         </section>
 
         <!-- Current Offers -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Ofertas Actuales</h2>
-                <div class="offers-grid">
-                    <!-- Oferta 1 -->
-                    <article class="offer-card">
-                        <div class="offer-header">
-                            <div class="offer-discount">50% OFF</div>
-                            <p>Segunda Unidad</p>
-                        </div>
-                        <div class="offer-content">
-                            <h3>Moda y Accesorios</h3>
-                            <span class="offer-badge">🏷️ Destacada</span>
-                            <p class="offer-description">
-                                Llevá dos prendas y pagá solo la mitad en la segunda. 
-                                Válido en marcas seleccionadas del sector de moda.
-                            </p>
-                            <div class="offer-validity">
-                                📅 Válido hasta: 30/11/2025
+                <div class="section-header-with-icon">
+                    <h2 class="section-title">Ofertas Vigentes</h2>
+                </div>
+                <div class="offers-vigentes-grid">
+                    <!-- Oferta 1 - Black Friday -->
+                    <article class="offer-vigente-card offer-card-featured">
+                        <div class="offer-vigente-content">
+                            <div class="offer-vigente-header">
+                                <h3>Black Friday</h3>
+                                <div class="offer-vigente-discount">Hasta 70% OFF</div>
                             </div>
+                            <div class="offer-featured-badge">DESTACADO</div>
+                            <p class="offer-vigente-description">
+                                Descuentos especiales en moda, tecnología y hogar
+                            </p>
+                            <p class="offer-vigente-validity">📅 Válido hasta el 30 de Noviembre</p>
+                            <span class="offer-vigente-tag">Múltiples categorías</span>
                         </div>
                     </article>
 
-                    <!-- Oferta 2 -->
-                    <article class="offer-card">
-                        <div class="offer-header">
-                            <div class="offer-discount">2x1</div>
-                            <p>En Cafetería</p>
-                        </div>
-                        <div class="offer-content">
-                            <h3>Starbucks & Havanna</h3>
-                            <span class="offer-badge">☕ Gastronomía</span>
-                            <p class="offer-description">
-                                Happy Hour de 14:00 a 17:00 hs. Comprá una bebida grande 
-                                y llevate otra del mismo tamaño gratis.
-                            </p>
-                            <div class="offer-validity">
-                                📅 Válido: Lun-Vie
+                    <!-- Oferta 2 - Happy Hour -->
+                    <article class="offer-vigente-card">
+                        <div class="offer-vigente-content">
+                            <div class="offer-vigente-header">
+                                <h3>Happy Hour Gastronomía</h3>
+                                <div class="offer-vigente-discount">2x1</div>
                             </div>
+                            <p class="offer-vigente-description">
+                                En todos los restaurantes participantes
+                            </p>
+                            <p class="offer-vigente-validity">📅 Lunes a Viernes 14:00-17:00</p>
+                            <span class="offer-vigente-tag">Gastronomía</span>
                         </div>
                     </article>
 
-                    <!-- Oferta 3 -->
-                    <article class="offer-card">
-                        <div class="offer-header">
-                            <div class="offer-discount">30% OFF</div>
-                            <p>Tecnología</p>
-                        </div>
-                        <div class="offer-content">
-                            <h3>Accesorios Electrónicos</h3>
-                            <span class="offer-badge">📱 Tech</span>
-                            <p class="offer-description">
-                                Descuento especial en auriculares, fundas, cargadores 
-                                y accesorios para smartphones y tablets.
-                            </p>
-                            <div class="offer-validity">
-                                📅 Válido hasta: 15/12/2025
+                    <!-- Oferta 3 - Tech Week -->
+                    <article class="offer-vigente-card">
+                        <div class="offer-vigente-content">
+                            <div class="offer-vigente-header">
+                                <h3>Tech Week</h3>
+                                <div class="offer-vigente-discount">40% OFF</div>
                             </div>
+                            <p class="offer-vigente-description">
+                                Descuentos en celulares, computadoras y accesorios
+                            </p>
+                            <p class="offer-vigente-validity">📅 Del 10 al 17 de Noviembre</p>
+                            <span class="offer-vigente-tag">Tecnología</span>
                         </div>
                     </article>
 
-                    <!-- Oferta 4 -->
-                    <article class="offer-card">
-                        <div class="offer-header">
-                            <div class="offer-discount">15% OFF</div>
-                            <p>Combos Gastronómicos</p>
-                        </div>
-                        <div class="offer-content">
-                            <h3>Patio de Comidas</h3>
-                            <span class="offer-badge">🍔 Combo</span>
-                            <p class="offer-description">
-                                Descuento en combos para toda la familia. Válido en 
-                                locales participantes del patio de comidas.
-                            </p>
-                            <div class="offer-validity">
-                                📅 Válido: Fines de semana
+                    <!-- Oferta 4 - Kids Week -->
+                    <article class="offer-vigente-card">
+                        <div class="offer-vigente-content">
+                            <div class="offer-vigente-header">
+                                <h3>Kids Week</h3>
+                                <div class="offer-vigente-discount">50% OFF</div>
                             </div>
-                        </div>
-                    </article>
-
-                    <!-- Oferta 5 -->
-                    <article class="offer-card">
-                        <div class="offer-header">
-                            <div class="offer-discount">25% OFF</div>
-                            <p>Productos de Belleza</p>
-                        </div>
-                        <div class="offer-content">
-                            <h3>Perfumería y Cosmética</h3>
-                            <span class="offer-badge">💄 Belleza</span>
-                            <p class="offer-description">
-                                Gran descuento en productos seleccionados de maquillaje, 
-                                skincare y fragancias de primeras marcas.
+                            <p class="offer-vigente-description">
+                                Segunda unidad en juguetería y ropa infantil
                             </p>
-                            <div class="offer-validity">
-                                📅 Válido hasta: 20/11/2025
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Oferta 6 -->
-                    <article class="offer-card">
-                        <div class="offer-header">
-                            <div class="offer-discount">3x2</div>
-                            <p>Entretenimiento</p>
-                        </div>
-                        <div class="offer-content">
-                            <h3>Entradas de Cine</h3>
-                            <span class="offer-badge">🎬 Películas</span>
-                            <p class="offer-description">
-                                Comprá 2 entradas y llevate la tercera gratis. 
-                                Válido de lunes a jueves en funciones antes de las 20:00 hs.
-                            </p>
-                            <div class="offer-validity">
-                                📅 Válido todo el mes
-                            </div>
+                            <p class="offer-vigente-validity">📅 Del 18 al 24 de Noviembre</p>
+                            <span class="offer-vigente-tag">Niños</span>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- How to Use Offers -->
+        <!-- Ofertas del Día -->
         <section class="section section-alt">
             <div class="container">
-                <h2 class="section-title">Cómo Aprovechar las Ofertas</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">📋</div>
-                        <h3>Consultá en el Local</h3>
-                        <p>Todas las ofertas están disponibles presentándote directamente en el local participante.</p>
+                <div class="section-header-with-icon">
+                    <h2 class="section-title">Ofertas del Día</h2>
+                </div>
+                <div class="ofertas-dia-grid">
+                    <article class="oferta-dia-card">
+                        <div class="oferta-dia-day">Martes</div>
+                        <h3>Almacén La Toscana</h3>
+                        <p>20% en productos seleccionados</p>
+                    </article>
+
+                    <article class="oferta-dia-card">
+                        <div class="oferta-dia-day">Miércoles</div>
+                        <h3>Florería Primavera</h3>
+                        <p>15% en ramos premium</p>
+                    </article>
+
+                    <article class="oferta-dia-card">
+                        <div class="oferta-dia-day">Jueves</div>
+                        <h3>PetShop Amigos</h3>
+                        <p>25% en alimento balanceado</p>
+                    </article>
+
+                    <article class="oferta-dia-card">
+                        <div class="oferta-dia-day">Viernes</div>
+                        <h3>Diseño Espacios</h3>
+                        <p>Consulta gratuita</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios Adicionales -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title section-title-normal">Beneficios Adicionales</h2>
+                <div class="beneficios-grid">
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">💳</div>
+                        <h3>Tarjetas Bancarias</h3>
+                        <p>Hasta 12 cuotas sin interés con tarjetas seleccionadas</p>
                     </div>
 
-                    <div class="service-card">
-                        <div class="service-icon">📧</div>
-                        <h3>Suscribite al Newsletter</h3>
-                        <p>Recibí ofertas exclusivas y promociones especiales directamente en tu email.</p>
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">🎁</div>
+                        <h3>Programa de Puntos</h3>
+                        <p>Acumula puntos en cada compra y canjéalos por descuentos</p>
                     </div>
 
-                    <div class="service-card">
-                        <div class="service-icon">💳</div>
-                        <h3>Beneficios con Tarjetas</h3>
-                        <p>Descuentos adicionales con tarjetas bancarias participantes.</p>
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">⭐</div>
+                        <h3>Club VIP</h3>
+                        <p>Regístrate y recibe ofertas exclusivas por email</p>
+                    </div>
+
+                    <div class="beneficio-card">
+                        <div class="beneficio-icon">📅</div>
+                        <h3>Ofertas Especiales</h3>
+                        <p>Promociones únicas en fechas especiales y cumpleaños</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Loyalty Program -->
-        <section class="section">
+        <section class="section newsletter-section">
             <div class="container">
-                <div class="cta-card">
-                    <div class="cta-icon">⭐</div>
-                    <h2>Programa de Fidelidad</h2>
-                    <p class="cta-text">
-                        Unite a nuestro programa de clientes frecuentes y disfrutá de beneficios exclusivos, 
-                        descuentos especiales y acceso anticipado a nuevas promociones.
+                <div class="newsletter-card">
+                    <div class="newsletter-icon">🎁</div>
+                    <h2>No Te Pierdas Nuestras Ofertas</h2>
+                    <p class="newsletter-text">
+                        Regístrate en nuestro newsletter y recibe ofertas exclusivas, descuentos especiales y acceso anticipado a nuestras promociones.
                     </p>
-                    <a href="servicio.html" class="btn btn-secondary">Más Información</a>
+                    <button class="btn btn-primary">Registrarme Ahora</button>
                 </div>
             </div>
         </section>
 
         <!-- Terms -->
-        <section class="section section-alt">
+        <section class="section">
             <div class="container">
-                <div class="terms-content">
+                <div class="terms-card">
                     <h3>Términos y Condiciones</h3>
-                    <ul>
-                        <li>Todas las ofertas están sujetas a disponibilidad de stock</li>
-                        <li>No acumulables con otras promociones salvo indicación contraria</li>
-                        <li>Las fechas de validez pueden variar según el local</li>
-                        <li>Consultá las condiciones específicas en cada punto de venta</li>
-                        <li>Galería El Ecléctico se reserva el derecho de modificar las promociones</li>
+                    <ul class="terms-list">
+                        <li>• Las ofertas están sujetas a stock disponible y pueden variar según el local</li>
+                        <li>• No acumulables con otras promociones salvo indicación contraria</li>
+                        <li>• Válido únicamente en locales participantes dentro de Galería El Ecléctico</li>
+                        <li>• Consulta en cada local por condiciones específicas de la promoción</li>
+                        <li>• Las ofertas pueden modificarse sin previo aviso</li>
                     </ul>
                 </div>
             </div>

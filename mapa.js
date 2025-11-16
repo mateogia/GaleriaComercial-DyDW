@@ -1,22 +1,22 @@
-// Base de datos de locales (simplificada - 9 locales principales)
+// Base de datos de locales (incluye los locales importantes de la galería)
 const locales = [
-    // PLANTA BAJA - Locales arriba del pasillo
+    // PLANTA BAJA - Locales arriba del pasillo (Av. Principal)
     { 
         id: 1, 
-        nombre: "Starbucks", 
-        categoria: "gastronomia", 
+        nombre: "Florería Primavera", 
+        categoria: "servicios", 
         piso: "planta-baja", 
         numero: "1", 
-        descripcion: "Café y pastelería",
+        descripcion: "Flores y arreglos florales",
         posicion: { top: '12%', left: '8%', width: '18%', height: '28%' }
     },
     { 
         id: 2, 
-        nombre: "Zara", 
-        categoria: "moda", 
+        nombre: "Petshop Amigos", 
+        categoria: "servicios", 
         piso: "planta-baja", 
         numero: "2", 
-        descripcion: "Ropa y accesorios",
+        descripcion: "Productos y accesorios para mascotas",
         posicion: { top: '12%', left: '33%', width: '22%', height: '28%' }
     },
     { 
@@ -28,14 +28,14 @@ const locales = [
         descripcion: "Tecnología y electrónica",
         posicion: { top: '12%', left: '62%', width: '28%', height: '28%' }
     },
-    // PLANTA BAJA - Locales abajo del pasillo
+    // PLANTA BAJA - Locales abajo del pasillo (Calle Comercio)
     { 
         id: 4, 
-        nombre: "Farmacity", 
-        categoria: "servicios", 
+        nombre: "Almacén Italiano La Toscana", 
+        categoria: "gastronomia", 
         piso: "planta-baja", 
         numero: "4", 
-        descripcion: "Farmacia y perfumería",
+        descripcion: "Productos gourmet italianos",
         posicion: { top: '58%', left: '8%', width: '20%', height: '32%' }
     },
     { 
@@ -49,11 +49,11 @@ const locales = [
     },
     { 
         id: 6, 
-        nombre: "Kentucky", 
-        categoria: "gastronomia", 
+        nombre: "Estudio Diseño Interior Espacios", 
+        categoria: "servicios", 
         piso: "planta-baja", 
         numero: "6", 
-        descripcion: "Comida rápida",
+        descripcion: "Decoración y diseño de interiores",
         posicion: { top: '58%', left: '66%', width: '24%', height: '32%' }
     },
     // PRIMER PISO - Locales arriba del pasillo
@@ -99,7 +99,12 @@ function renderFloorMap(piso) {
 
     const localesDelPiso = filteredLocales.filter(local => local.piso === piso);
     
-    floorMap.innerHTML = localesDelPiso.map(local => `
+    // IMPORTANTE: Eliminar solo los locales anteriores, NO los elementos espaciales
+    const existingStores = floorMap.querySelectorAll('.store-space');
+    existingStores.forEach(store => store.remove());
+    
+    // Agregar los nuevos locales sin borrar los elementos espaciales
+    const localesHTML = localesDelPiso.map(local => `
         <div class="store-space" 
              data-id="${local.id}" 
              onclick="showLocalInfo(${local.id})"
@@ -112,6 +117,8 @@ function renderFloorMap(piso) {
             <div class="store-name">${local.nombre}</div>
         </div>
     `).join('');
+    
+    floorMap.insertAdjacentHTML('beforeend', localesHTML);
 }
 
 // Función para renderizar lista de locales

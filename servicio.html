@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicio al Cliente - Galería El Ecléctico</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="menu.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -12,10 +13,22 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="Galería El Ecléctico">
+                    <img src="assets/logo-eclectico.png" alt="Galería El Ecléctico">
                 </a>
                 
-                <nav class="nav">
+                <!-- Botón hamburguesa (solo visible en móvil) -->
+                <button class="hamburger" id="hamburger" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav" id="nav">
+                    <div class="nav-header">
+                        <h2>Menú de Navegación</h2>
+                        <p class="nav-subtitle">Explora las diferentes secciones de Galería El Ecléctico</p>
+                        <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
+                    </div>
                     <a href="index.html" class="nav-link">INICIO</a>
                     <a href="servicio.html" class="nav-link active">SERVICIO</a>
                     <a href="entretenimiento.html" class="nav-link">ENTRETENIMIENTO</a>
@@ -31,10 +44,12 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="page-hero-simple">
-            <div class="container">
-                <h1>Servicio al Cliente</h1>
-                <p>Estamos aquí para ayudarte en todo lo que necesites</p>
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Servicio al Cliente</h1>
+                    <p class="hero-subtitle">Todo lo que necesitas para una experiencia de compra excepcional</p>
+                </div>
             </div>
         </section>
 
@@ -46,62 +61,56 @@
                     <div class="service-card">
                         <div class="service-icon">ℹ️</div>
                         <h3>Información</h3>
-                        <p>Mostradores de atención en cada piso para ayudarte a encontrar lo que buscas.</p>
+                        <p>Ubicado en el hall principal. Nuestro personal está disponible para ayudarte</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-icon">🅿️</div>
-                        <h3>Estacionamiento</h3>
-                        <p>Amplio estacionamiento cubierto con más de 500 plazas disponibles.</p>
+                        <h3>Estacionamiento Gratuito</h3>
+                        <p>Las primeras dos horas son gratis. Espacios cubiertos y vigilados</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-icon">🛡️</div>
-                        <h3>Seguridad</h3>
-                        <p>Vigilancia las 24 horas y sistema de cámaras en todos los sectores.</p>
+                        <h3>Wifi Gratuito</h3>
+                        <p>Conexión de alta velocidad en todas las áreas de la galería</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-icon">♿</div>
-                        <h3>Accesibilidad</h3>
-                        <p>Instalaciones completamente accesibles con rampas y ascensores.</p>
+                        <h3>Múltiples Formas de Pago</h3>
+                        <p>Aceptamos efectivo, todas las tarjetas y pagos digitales</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-icon">📶</div>
-                        <h3>WiFi Gratis</h3>
-                        <p>Internet de alta velocidad disponible en toda la galería.</p>
+                        <h3>Servicios de carritos</h3>
+                        <p>Carritos de compras disponibles para tu comomidad</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-icon">👶</div>
-                        <h3>Sala de Lactancia</h3>
-                        <p>Espacios cómodos y privados para mamás con bebés.</p>
+                        <h3>Gift Cards</h3>
+                        <p>Tarjetas de regalo disponibles para usar en todos nuestros locales</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-icon">🎁</div>
-                        <h3>Gift Cards</h3>
-                        <p>Tarjetas de regalo disponibles para usar en todos nuestros locales.</p>
+                        <h3>Atención Personalizada</h3>
+                        <p>Personal shopper disponible con reserva previa</p>
                     </div>
 
                     <div class="service-card">
-                        <div class="service-icon">🚻</div>
-                        <h3>Baños</h3>
-                        <p>Baños modernos y limpios en todos los pisos, incluyendo cambiadores.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">🏧</div>
-                        <h3>Cajeros Automáticos</h3>
-                        <p>Red completa de cajeros de los principales bancos.</p>
+                        <div class="service-icon">🗺️</div>
+                        <h3>Mapa Interactivo</h3>
+                        <p>Encuentra rápidamente cualquier local o servicio en nuestra galería</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Info -->
-        <section class="section section-alt">
+        <!-- <section class="section section-alt">
             <div class="container">
                 <h2 class="section-title">Información de Contacto</h2>
                 <div class="contact-grid">
@@ -127,10 +136,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- FAQ -->
-        <section class="section">
+        <!-- <section class="section">
             <div class="container">
                 <h2 class="section-title">Preguntas Frecuentes</h2>
                 <div class="faq-content">
@@ -165,10 +174,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- CTA -->
-        <section class="section">
+        <!-- <section class="section">
             <div class="container">
                 <div class="cta-card">
                     <div class="cta-icon">💬</div>
@@ -179,7 +188,7 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <!-- Footer -->

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locales - Galería El Ecléctico</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="menu.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -12,10 +13,22 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="Galería El Ecléctico">
+                    <img src="assets/logo-eclectico.png" alt="Galería El Ecléctico">
                 </a>
                 
-                <nav class="nav">
+                <!-- Botón hamburguesa (solo visible en móvil) -->
+                <button class="hamburger" id="hamburger" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav" id="nav">
+                    <div class="nav-header">
+                        <h2>Menú de Navegación</h2>
+                        <p class="nav-subtitle">Explora las diferentes secciones de Galería El Ecléctico</p>
+                        <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
+                    </div>
                     <a href="index.html" class="nav-link">INICIO</a>
                     <a href="servicio.html" class="nav-link">SERVICIO</a>
                     <a href="entretenimiento.html" class="nav-link">ENTRETENIMIENTO</a>
@@ -44,84 +57,92 @@
                 <h2 class="section-title">Locales Destacados</h2>
                 <div class="stores-grid">
                     <!-- Florería Primavera -->
-                    <article class="store-card">
-                        <div class="store-image">
-                            <div class="store-icon">🌸</div>
-                        </div>
-                        <div class="store-content">
-                            <h3>Florería Primavera</h3>
-                            <p class="store-description">Flores frescas, arreglos personalizados y plantas de interior</p>
-                            <div class="store-info">
-                                <p>📍 Local 102 - Planta Baja</p>
-                                <p>🕐 Lun-Dom 10:00-22:00</p>
+                    <a href="#" class="store-card-link">
+                        <article class="store-card">
+                            <div class="store-image store-image-flowers">
+                                <div class="store-icon">🌸</div>
                             </div>
-                            <div class="store-tags">
-                                <span class="tag">Flores</span>
-                                <span class="tag">Plantas</span>
-                                <span class="tag">Eventos</span>
+                            <div class="store-content">
+                                <h3>Florería Primavera</h3>
+                                <p class="store-description">Flores frescas, arreglos personalizados y plantas de interior</p>
+                                <div class="store-info">
+                                    <p>📍 Local 102 - Planta Baja</p>
+                                    <p>🕐 Lun-Dom 10:00-22:00</p>
+                                </div>
+                                <div class="store-tags">
+                                    <span class="tag">Flores</span>
+                                    <span class="tag">Plantas</span>
+                                    <span class="tag">Eventos</span>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
 
                     <!-- PetShop Amigos -->
-                    <article class="store-card">
-                        <div class="store-image">
-                            <div class="store-icon">🐾</div>
-                        </div>
-                        <div class="store-content">
-                            <h3>PetShop Amigos</h3>
-                            <p class="store-description">Todo para tu mascota: alimentos, accesorios y servicio de veterinaria</p>
-                            <div class="store-info">
-                                <p>📍 Local 215 - Primer Piso</p>
-                                <p>🕐 Lun-Sab 10:00-21:00</p>
+                    <a href="#" class="store-card-link">
+                        <article class="store-card">
+                            <div class="store-image store-image-pets">
+                                <div class="store-icon">🐾</div>
                             </div>
-                            <div class="store-tags">
-                                <span class="tag">Mascotas</span>
-                                <span class="tag">Veterinaria</span>
-                                <span class="tag">Accesorios</span>
+                            <div class="store-content">
+                                <h3>PetShop Amigos</h3>
+                                <p class="store-description">Todo para tu mascota: alimentos, accesorios y servicio de veterinaria</p>
+                                <div class="store-info">
+                                    <p>📍 Local 215 - Primer Piso</p>
+                                    <p>🕐 Lun-Sab 10:00-21:00</p>
+                                </div>
+                                <div class="store-tags">
+                                    <span class="tag">Mascotas</span>
+                                    <span class="tag">Veterinaria</span>
+                                    <span class="tag">Accesorios</span>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
 
                     <!-- Almacén Italiano -->
-                    <article class="store-card">
-                        <div class="store-image">
-                            <div class="store-icon">🍝</div>
-                        </div>
-                        <div class="store-content">
-                            <h3>Almacén Italiano La Toscana</h3>
-                            <p class="store-description">Productos gourmet importados, pastas frescas y delicatessen</p>
-                            <div class="store-info">
-                                <p>📍 Local 118 - Planta Baja</p>
-                                <p>🕐 Lun-Dom 10:00-22:00</p>
+                    <a href="#" class="store-card-link">
+                        <article class="store-card">
+                            <div class="store-image store-image-food">
+                                <div class="store-icon">🍝</div>
                             </div>
-                            <div class="store-tags">
-                                <span class="tag">Gourmet</span>
-                                <span class="tag">Importados</span>
-                                <span class="tag">Pastas</span>
+                            <div class="store-content">
+                                <h3>Almacén Italiano La Toscana</h3>
+                                <p class="store-description">Productos gourmet importados, pastas frescas y delicatessen</p>
+                                <div class="store-info">
+                                    <p>📍 Local 118 - Planta Baja</p>
+                                    <p>🕐 Lun-Dom 10:00-22:00</p>
+                                </div>
+                                <div class="store-tags">
+                                    <span class="tag">Gourmet</span>
+                                    <span class="tag">Importados</span>
+                                    <span class="tag">Pastas</span>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
 
                     <!-- Estudio Diseño -->
-                    <article class="store-card">
-                        <div class="store-image">
-                            <div class="store-icon">🏠</div>
-                        </div>
-                        <div class="store-content">
-                            <h3>Estudio Diseño Interior Espacios</h3>
-                            <p class="store-description">Asesoramiento en decoración, mobiliario y proyectos personalizados</p>
-                            <div class="store-info">
-                                <p>📍 Local 302 - Segundo Piso</p>
-                                <p>🕐 Lun-Vie 10:00-20:00</p>
+                    <a href="#" class="store-card-link">
+                        <article class="store-card">
+                            <div class="store-image store-image-design">
+                                <div class="store-icon">🏠</div>
                             </div>
-                            <div class="store-tags">
-                                <span class="tag">Diseño</span>
-                                <span class="tag">Decoración</span>
-                                <span class="tag">Mobiliario</span>
+                            <div class="store-content">
+                                <h3>Estudio Diseño Interior Espacios</h3>
+                                <p class="store-description">Asesoramiento en decoración, mobiliario y proyectos personalizados</p>
+                                <div class="store-info">
+                                    <p>📍 Local 302 - Segundo Piso</p>
+                                    <p>🕐 Lun-Vie 10:00-20:00</p>
+                                </div>
+                                <div class="store-tags">
+                                    <span class="tag">Diseño</span>
+                                    <span class="tag">Decoración</span>
+                                    <span class="tag">Mobiliario</span>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
                 </div>
             </div>
         </section>
@@ -197,7 +218,7 @@
         <!-- Store Features -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Lo Que Ofrecen Nuestros Locales</h2>
+                <h2 class="section-title section-title-small">Lo Que Ofrecen Nuestros Locales</h2>
                 <div class="services-grid">
                     <div class="service-card">
                         <h3>Calidad Garantizada</h3>

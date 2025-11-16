@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa de Locales - Galería El Ecléctico</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="menu.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -12,10 +13,22 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="Galería El Ecléctico">
+                    <img src="assets/logo-eclectico.png" alt="Galería El Ecléctico">
                 </a>
                 
-                <nav class="nav">
+                <!-- Botón hamburguesa (solo visible en móvil) -->
+                <button class="hamburger" id="hamburger" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav" id="nav">
+                    <div class="nav-header">
+                        <h2>Menú de Navegación</h2>
+                        <p class="nav-subtitle">Explora las diferentes secciones de Galería El Ecléctico</p>
+                        <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
+                    </div>
                     <a href="index.html" class="nav-link">INICIO</a>
                     <a href="servicio.html" class="nav-link">SERVICIO</a>
                     <a href="entretenimiento.html" class="nav-link">ENTRETENIMIENTO</a>
@@ -104,12 +117,39 @@
                             <p class="floor-subtitle">Vista desde arriba del nivel principal</p>
                         </div>
                         <div class="floor-plan">
-                            <!-- Entrada principal -->
-                            <div class="entrance">
-                                <span>🚪 ENTRADA PRINCIPAL</span>
+                            <!-- Avenida Principal - Vertical (de arriba hacia abajo) -->
+                            <div class="street-label street-vertical">
+                                <span>↓</span>
+                                <span>AV. PRINCIPAL</span>
+                                <span>↓</span>
                             </div>
-                            <!-- Label del pasillo -->
-                            <div class="hallway-label">🚶 PASILLO CENTRAL 🚶</div>
+                            
+                            <!-- Indicador de orientación -->
+                            <div class="compass-indicator">
+                                <div class="compass-arrow">▲</div>
+                                <div class="compass-label">NORTE</div>
+                            </div>
+                            
+                            <!-- Entrada desde la avenida (izquierda) -->
+                            <div class="entrance-marker">
+                                <span>🚪</span>
+                                <span>ENTRADA</span>
+                                <span>GALERÍA</span>
+                            </div>
+                            
+                            <!-- Label del pasillo con explicación -->
+                            <div class="hallway-label">
+                                🚶 PASILLO CENTRAL 🚶
+                                <div class="hallway-sublabel">Circulación principal de la galería</div>
+                            </div>
+                            
+                            <!-- Conexión escaleras/ascensor al final del pasillo -->
+                            <div class="stair-connection">
+                                <span>🪜</span>
+                                <span>ESCALERAS</span>
+                                <span>ASCENSOR</span>
+                            </div>
+                            
                             <!-- Los locales se generan dinámicamente con JavaScript -->
                         </div>
                     </div>
@@ -121,13 +161,69 @@
                             <p class="floor-subtitle">Zona de entretenimiento y gastronomía</p>
                         </div>
                         <div class="floor-plan">
-                            <!-- Escaleras -->
-                            <div class="stairs">
-                                <span>🪜 ESCALERAS / ASCENSOR</span>
+                            <!-- Indicador de orientación -->
+                            <div class="compass-indicator">
+                                <div class="compass-arrow">▲</div>
+                                <div class="compass-label">NORTE</div>
                             </div>
+                            
                             <!-- Label del pasillo -->
-                            <div class="hallway-label">🚶 PASILLO CENTRAL 🚶</div>
+                            <div class="hallway-label">
+                                🚶 PASILLO CENTRAL 🚶
+                                <div class="hallway-sublabel">Circulación principal de la galería</div>
+                            </div>
+                            
+                            <!-- Conexión escaleras/ascensor al final del pasillo -->
+                            <div class="stair-connection">
+                                <span>🪜</span>
+                                <span>ESCALERAS</span>
+                                <span>ASCENSOR</span>
+                            </div>
+                            
                             <!-- Los locales se generan dinámicamente con JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Leyenda explicativa -->
+                <div class="map-legend-info">
+                    <h3>📖 Guía del Mapa</h3>
+                    <div class="legend-items-grid">
+                        <div class="legend-info-item">
+                            <div class="legend-icon-box" style="background: repeating-linear-gradient(45deg, #ffffff 0px, #ffffff 10px, #f8f8f8 10px, #f8f8f8 20px); border: 5px solid #1A1A1A;">
+                                🏪
+                            </div>
+                            <div class="legend-info-text">
+                                <strong>Locales Comerciales</strong>
+                                <p>Haz clic para ver más información</p>
+                            </div>
+                        </div>
+                        <div class="legend-info-item">
+                            <div class="legend-icon-box" style="background: linear-gradient(90deg, rgba(201,169,89,0.9) 0%, rgba(201,169,89,1) 50%, rgba(201,169,89,0.9) 100%); color: white; font-weight: 900;">
+                                🚶
+                            </div>
+                            <div class="legend-info-text">
+                                <strong>Pasillo Central</strong>
+                                <p>Circulación principal con acceso a todos los locales</p>
+                            </div>
+                        </div>
+                        <div class="legend-info-item">
+                            <div class="legend-icon-box" style="background: linear-gradient(180deg, #C9A959 0%, #B8963D 100%); color: white; font-weight: 900;">
+                                🚪
+                            </div>
+                            <div class="legend-info-text">
+                                <strong>Entrada Principal</strong>
+                                <p>Acceso desde Calle Comercio</p>
+                            </div>
+                        </div>
+                        <div class="legend-info-item">
+                            <div class="legend-icon-box" style="background: white; border: 3px solid #1A1A1A;">
+                                ▲<br><small style="font-size: 0.5rem;">N</small>
+                            </div>
+                            <div class="legend-info-text">
+                                <strong>Orientación</strong>
+                                <p>Norte hacia arriba del mapa</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -145,29 +241,6 @@
                     <div class="no-results-icon">🔍</div>
                     <h3>No se encontraron resultados</h3>
                     <p>Intenta con otro término de búsqueda o categoría</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Legend -->
-        <section class="section section-alt">
-            <div class="container">
-                <div class="map-legend">
-                    <h3>Leyenda</h3>
-                    <div class="legend-items">
-                        <div class="legend-item">
-                            <span class="legend-color" style="background-color: #C9A959;"></span>
-                            <span>Local resaltado (resultado de búsqueda)</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color" style="background-color: #4ade80;"></span>
-                            <span>Local disponible</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-icon">📍</span>
-                            <span>Haz clic en un local para ver más información</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

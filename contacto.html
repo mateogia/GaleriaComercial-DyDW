@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Galería El Ecléctico</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="menu.js"></script>
+    <script defer src="contacto.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -12,10 +14,22 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="Galería El Ecléctico">
+                    <img src="assets/logo-eclectico.png" alt="Galería El Ecléctico">
                 </a>
                 
-                <nav class="nav">
+                <!-- Botón hamburguesa (solo visible en móvil) -->
+                <button class="hamburger" id="hamburger" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav" id="nav">
+                    <div class="nav-header">
+                        <h2>Menú de Navegación</h2>
+                        <p class="nav-subtitle">Explora las diferentes secciones de Galería El Ecléctico</p>
+                        <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
+                    </div>
                     <a href="index.html" class="nav-link">INICIO</a>
                     <a href="servicio.html" class="nav-link">SERVICIO</a>
                     <a href="entretenimiento.html" class="nav-link">ENTRETENIMIENTO</a>
