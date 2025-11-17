@@ -31,7 +31,7 @@ const locales = [
     // PLANTA BAJA - Locales abajo del pasillo (Calle Comercio)
     { 
         id: 4, 
-        nombre: "Almacén Italiano La Toscana", 
+        nombre: "Almacén Italiano Legna", 
         categoria: "gastronomia", 
         piso: "planta-baja", 
         numero: "4", 
