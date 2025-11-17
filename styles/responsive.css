@@ -1,0 +1,289 @@
+/* ============================================
+   RESPONSIVE
+   Media queries para todas las secciones
+   ============================================ */
+
+/* Mobile responsive (hasta 768px) */
+@media (max-width: 768px) {
+    /* Hero */
+    .hero-content h1 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Grids */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .restaurants-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stores-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Ofertas */
+    .offers-vigentes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ofertas-dia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Entretenimiento */
+    .entertainment-modern-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .events-upcoming-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kids-zone-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cinema-detail-info {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .schedule-row {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-xs);
+    }
+    
+    .pricing-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Formularios */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+    
+    .message-bubble {
+        max-width: 85%;
+    }
+    
+    /* Contacto */
+    .contact-methods-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-details {
+        text-align: center;
+    }
+
+    /* Food Court */
+    .food-court-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .food-court-visual {
+        min-height: 250px;
+    }
+
+    /* Mapa Interactivo */
+    .search-section {
+        padding: var(--spacing-md);
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+        font-size: 0.75rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .floor-selector {
+        flex-direction: column;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .floor-btn {
+        width: 100%;
+    }
+    
+    .floor-plan {
+        height: 350px;
+        padding-left: 40px;
+    }
+    
+    /* Ajustes para elementos espaciales en mobile */
+    .street-label.street-vertical {
+        width: 35px;
+        left: 5px;
+        font-size: 0.5rem;
+        padding: var(--spacing-sm) 2px;
+        gap: var(--spacing-xs);
+    }
+    
+    .street-label.street-vertical span:first-child,
+    .street-label.street-vertical span:last-child {
+        font-size: 1rem;
+    }
+    
+    .compass-indicator {
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .compass-arrow {
+        font-size: 1.2rem;
+    }
+    
+    .compass-label {
+        font-size: 0.4rem;
+    }
+    
+    .hallway-label {
+        font-size: 0.7rem;
+        padding: 8px 16px;
+    }
+    
+    .hallway-sublabel {
+        font-size: 0.5rem;
+        display: none; /* Ocultar subtítulo en mobile */
+    }
+    
+    .entrance-marker {
+        left: 42px;
+        padding: 8px 10px;
+        font-size: 0.55rem;
+    }
+    
+    .entrance-marker span:first-child {
+        font-size: 1.2rem;
+    }
+    
+    .entrance-marker span:not(:first-child) {
+        font-size: 0.5rem;
+    }
+    
+    .stair-connection {
+        right: 5px;
+        padding: 8px 10px;
+        font-size: 0.55rem;
+    }
+    
+    .stair-connection span:first-child {
+        font-size: 1.2rem;
+    }
+    
+    .stair-connection span:not(:first-child) {
+        font-size: 0.5rem;
+    }
+    
+    .floor-plan::before {
+        left: 10%;
+        right: 3%;
+        border-width: 4px;
+    }
+    
+    .floor-plan::after {
+        left: 10%;
+        right: 3%;
+    }
+    
+    .store-space {
+        padding: var(--spacing-sm);
+    }
+    
+    .store-name {
+        font-size: 0.65rem;
+    }
+    
+    .store-number {
+        font-size: 0.9rem;
+    }
+    
+    .store-icon {
+        font-size: 1.5rem;
+    }
+    
+    .store-list-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-legend {
+        padding: var(--spacing-md);
+    }
+    
+    .legend-items {
+        font-size: 0.875rem;
+    }
+    
+    .map-legend-info {
+        padding: var(--spacing-md);
+    }
+    
+    .legend-items-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .map-interactive-container {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Tablet responsive (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .entertainment-modern-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .events-upcoming-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offers-vigentes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ofertas-dia-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,418 @@
+/* ============================================
+   CONTACTO
+   Estilos para la página de contacto
+   ============================================ */
+
+/* Contact Page - Contact Methods */
+.contact-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-method-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-method-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-method-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-method-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-method-card p {
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-method-time {
+    font-size: var(--font-size-sm);
+    color: var(--color-muted-foreground);
+}
+
+/* Contact Form */
+.contact-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-card);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: var(--font-size-base);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: var(--font-size-base);
+    font-family: inherit;
+    background-color: var(--color-background);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.form-checkbox label {
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: flex-start;
+}
+
+.btn-secondary-outline {
+    background-color: transparent;
+    color: var(--color-foreground);
+    border: 1px solid var(--color-border);
+}
+
+.btn-secondary-outline:hover {
+    background-color: var(--color-muted);
+}
+
+/* Map Section */
+.map-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.map-placeholder {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-secondary);
+}
+
+.map-placeholder h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.map-info {
+    color: var(--color-muted-foreground);
+    margin-bottom: var(--spacing-lg);
+}
+
+.map-details {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    margin-top: var(--spacing-lg);
+}
+
+.map-detail-item {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    background-color: var(--color-muted);
+    border-radius: var(--radius);
+}
+
+/* Chatbot */
+.chatbot-intro {
+    text-align: center;
+    color: var(--color-muted-foreground);
+    margin-bottom: var(--spacing-xl);
+}
+
+.chatbot-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.chatbot-window {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.chatbot-header {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.chatbot-avatar {
+    font-size: 2.5rem;
+}
+
+.chatbot-info h3 {
+    margin-bottom: 0.25rem;
+}
+
+.chatbot-status {
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+    color: #4ade80;
+}
+
+.chatbot-status::before {
+    content: "●";
+    margin-right: 0.25rem;
+}
+
+.chatbot-messages {
+    padding: var(--spacing-lg);
+    min-height: 400px;
+    max-height: 700px;
+    overflow-y: auto;
+    background-color: var(--color-background);
+}
+
+.chat-message {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.message-avatar {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.message-bubble {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+    max-width: 80%;
+}
+
+.message-bubble p {
+    margin-bottom: var(--spacing-xs);
+}
+
+.message-bubble p:last-of-type {
+    margin-bottom: 0;
+}
+
+.message-bubble a {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+/* Interactive Chat */
+.chat-interactive {
+    margin-top: var(--spacing-xl);
+}
+
+.chat-prompt {
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-foreground);
+}
+
+.chat-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+/* Hide radio buttons */
+.chat-radio {
+    display: none;
+}
+
+/* Option labels (questions) */
+.chat-option-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background-color: var(--color-card);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chat-option-label:hover {
+    border-color: var(--color-secondary);
+    background-color: var(--color-muted);
+    transform: translateX(4px);
+}
+
+.chat-option-emoji {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.chat-option-text {
+    font-weight: 500;
+}
+
+/* When radio is checked */
+.chat-radio:checked + .chat-option-label {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-secondary-foreground);
+}
+
+/* Response (hidden by default) */
+.chat-response {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+
+/* Show response when radio is checked */
+.chat-radio:checked ~ .chat-response {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.chat-response .chat-message {
+    margin-bottom: 0;
+}
+
+.chat-response .message-bubble {
+    max-width: 100%;
+    background: linear-gradient(135deg, var(--color-card) 0%, var(--color-muted) 100%);
+}
+
+.chatbot-footer {
+    background-color: var(--color-muted);
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.chatbot-note {
+    font-size: var(--font-size-sm);
+    color: var(--color-muted-foreground);
+}
+
+/* Contact Info Card */
+.contact-info-card {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info-card h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-info-card p {
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.contact-info-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info-item {
+    padding: var(--spacing-sm);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+}

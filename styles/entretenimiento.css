@@ -1,0 +1,242 @@
+/* ============================================
+   ENTRETENIMIENTO
+   Estilos para la página de entretenimiento
+   ============================================ */
+
+/* Entertainment Modern Cards */
+.entertainment-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.entertainment-modern-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+    transition: box-shadow 0.2s, transform 0.2s;
+    text-align: left;
+}
+
+.entertainment-modern-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.entertainment-modern-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.entertainment-modern-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-foreground);
+}
+
+.entertainment-modern-description {
+    color: var(--color-muted-foreground);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.entertainment-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.entertainment-tag {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: calc(var(--radius) / 2);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+/* Section Header with Icon */
+.section-header-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Upcoming Events */
+.events-upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.event-upcoming-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-lg);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.event-upcoming-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.event-date {
+    margin-bottom: var(--spacing-md);
+}
+
+.event-date-box {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+}
+
+.event-upcoming-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-foreground);
+}
+
+.event-upcoming-card p {
+    color: var(--color-muted-foreground);
+    margin-bottom: var(--spacing-xs);
+}
+
+.event-time {
+    color: var(--color-muted-foreground);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+/* Kids Zone */
+.kids-zone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kids-zone-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+}
+
+.kids-zone-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.kids-zone-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-foreground);
+}
+
+.kids-zone-card p {
+    color: var(--color-muted-foreground);
+    line-height: 1.6;
+}
+
+/* Cinema Detail Section */
+.cinema-detail-section {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.cinema-detail-card {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cinema-detail-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-secondary);
+}
+
+.cinema-detail-card h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-background);
+}
+
+.cinema-detail-description {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+    color: rgba(248, 247, 244, 0.9);
+    line-height: 1.6;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.cinema-detail-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.cinema-info-item {
+    padding: var(--spacing-lg);
+}
+
+.cinema-info-item h4 {
+    color: var(--color-secondary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.cinema-info-item p {
+    color: rgba(248, 247, 244, 0.85);
+    font-size: var(--font-size-base);
+}
+
+/* Pricing */
+.pricing-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pricing-card h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.pricing-text {
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-muted-foreground);
+}
+
+.pricing-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.pricing-item {
+    background-color: var(--color-muted);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+}
